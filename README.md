@@ -17,7 +17,7 @@ rtl/
 
 ├── apb_async_bridge.v
 
-├── cdc_handshake_bus.v
+├── cdc_handshake_ctrl.v
 
 ├── async_fifo.v
 

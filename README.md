@@ -56,4 +56,5 @@ APB Slave (clk B)
 
 
 
+[VLSI_CAD_Project_Proposal.pdf](https://github.com/user-attachments/files/24605533/VLSI_CAD_Project_Proposal.pdf)
 

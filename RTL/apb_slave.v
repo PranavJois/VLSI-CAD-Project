@@ -20,10 +20,8 @@ module apb_slave (
             pready <= 0;
             if (psel && penable) begin
                 pready <= 1;
-                if (pwrite)
-                    reg0 <= pwdata;
-                else
-                    prdata <= reg0;
+                if (pwrite) reg0 <= pwdata;
+                else prdata <= reg0;
             end
         end
     end

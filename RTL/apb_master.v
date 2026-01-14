@@ -22,38 +22,11 @@ module apb_master (
             pwdata  <= 32'h12345678;
         end else begin
             case(state)
-                0: begin
-                    psel <= 1;
-                    penable <= 0;
-                    pwrite <= 1;
-                    paddr <= 32'h0;
-                    state <= 1;
-                end
-                1: begin
-                    penable <= 1;
-                    if (pready) begin
-                        psel <= 0;
-                        penable <= 0;
-                        state <= 2;
-                    end
-                end
-                2: begin
-                    psel <= 1;
-                    penable <= 0;
-                    pwrite <= 0;
-                    state <= 3;
-                end
-                3: begin
-                    penable <= 1;
-                    if (pready) begin
-                        psel <= 0;
-                        penable <= 0;
-                        state <= 3;
-                    end
-                end
+                0: begin psel<=1; penable<=0; pwrite<=1; paddr<=32'h0; state<=1; end
+                1: begin penable<=1; if(pready) begin psel<=0; penable<=0; state<=2; end end
+                2: begin psel<=1; penable<=0; pwrite<=0; state<=3; end
+                3: begin penable<=1; if(pready) begin psel<=0; penable<=0; state<=3; end end
             endcase
         end
     end
-endmodule
-
 endmodule

@@ -1,3 +1,4 @@
+`include "bit_sync.v"
 module cdc_handshake_ctrl (
     input  wire src_clk,
     input  wire src_rst,
